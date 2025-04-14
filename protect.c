@@ -80,7 +80,7 @@ int main(int argc, char *argv[]){
   }
 
   //using mprotect on first page with read and write access
-  if (mprotect(p, pagesize, PROT_READ | PROT_WRITE) == -1){
+  if (mprotect(size, pagesize, PROT_READ | PROT_WRITE) == -1){
     handle_error("mprotect");
   }
 
